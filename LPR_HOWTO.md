@@ -1,21 +1,5 @@
-# LPR - Laboratorio Portatil de Redes
+# LPR HOWTO - Como comenzar a trabajar con LPR (Laboratorio Portatil de Redes)
 
-Motivación:
-	Crear una herramienta fundamental para el desarrollo de las prácticas en las materias Servicios en Sistemas Operativos de Redes, Introducción a la Seguridad de Redes, Sistemas Operativos de Redes, ethical hacking y toda aquella que requiera su utilizacion.
-
-Objectivos:
-El diseño e implementación de un ambiente de simulación de redes de computadoras. Los alcances del mismo son los siguientes:
-
- Permitir desplegar toda una red de máquinas virtualizada en solo una computadora, sin tener que instalar software alguno en la misma.
- La red debe poseer al menos 6 nodos con distintos tipos de sistema operativo, de ser posible.
- Permitir interconectar de distinta manera los nodos creados con el objetivo de ensayar distintas topologías de red en capa de enlace.
- Dar soporte de distintos protocolos de capa de red  como IPv4, IPv6, IPSec, etc.
- Configurar en cada uno de los nodos distintos protocolos pertenecientes a de capa de aplicación, tales como HTTP, SMTP, DNS, DHCP, FTP, SIFS, SSH, Proxy, distintos tipos de VPN , LDAP, etc.
- Iniciar, detener y ver el estado de los servicios configurados en los nodos cuando sea necesario.
- Ejecutar clientes que hagan uso de los servicios puestos en marcha en otros nodos, para verificar el correcto funcionamiento de tales servicios.
- Almacenar toda la configuración realizada, para posteriores simulaciones.
- Cear una imagen booteable en DVD o USB  con todo el software necesario.
- Realizar ajustes para permitir la simulación en hardware limitado en capacidad de procesamiento y memoria principal.
 
 instalar virtualbox 
 verificar que funcione ;-)

@@ -29,3 +29,5 @@ imagen servidor
 imagen router
 	apt-get install iptables -> 1.3
 
+host
+	modificada imagen /usr/share/systemback/splash.png
