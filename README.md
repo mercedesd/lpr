@@ -1,1 +1,35 @@
-# lpr Laboratorio Portatil de Redes
+# LPR - Laboratorio Portatil de Redes
+
+version anterior 1.2 
+
+Mejoras propuestas:
+
+imagen cliente
+    apt-get install curl -> 1.3 
+    modificado script de  myvncserver para poner argumentos -> 1.3 
+
+imagen cliente-cli
+    apt-get install elinks -> 1.3 
+    apt-get install curl -> 1.3 
+    apt-get install iputils-ping -> 1.3 
+
+imagen servidor
+    apt-get install iptables -> 1.3 
+    .vimrc set bg=dark -> 1.3 
+    agregar dos lineas a /etc/mail/sendmail.cf -> 1.3 
+        FEATURE(accept_unqualified_senders)dnl
+        FEATURE(accept_unresolvable_domains)dnl
+    sacar la palabra dns en el archivo /etc/nsswitch.conf -> 1.3 
+    sacar ultima linea en /etc/mail/local-host-names -> 1.3 
+    en el archivo /etc/dovecot/conf.d/10-aut.conf -> 1.3 
+        disable_plaintext_auth = no
+    en /etc/bind/named.conf.options modificado -> 1.3 
+        listen-on { 127.0.0.1; };
+        listen-on-v6 { ::1; };
+
+imagen router
+    apt-get install iptables -> 1.3 
+
+version estable 1.3
+
+
