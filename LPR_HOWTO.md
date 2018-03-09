@@ -1,75 +1,77 @@
 # LPR HOWTO - Como comenzar a trabajar con LPR  
 
 se puede trabajar de varias maneras Dependiendo de la necesidad:
-### A) Trabajo en distintos lugares, sin posibilidad de modificar el Sistema Operativo de cada PC
-Requisitos:
-- LiveCD (DVD) o USB (4G) con sistema operativo LPR
-- USB (4G) para almacenar imagenes y llevarlas a los distintos lugares   
+### A) Trabajo en distintos lugares, sin acceder/modificar el disco de cada PC
+1. Requisitos:
+  - LiveCD (DVD) o USB (4G) con sistema operativo LPR
+  - USB (4G) para almacenar imagenes y llevarlas a los distintos lugares   
 
-La imagen de LPR puede ser descargada desde < URL unsl >  
+2. Configuracion inicial:  
+  - La imagen de LPR puede ser descargada desde < URL unsl >  
 
-Usar k3b u otra herramienta para grabar el DVD o el USB
+  - Usar k3b u otra herramienta para grabar la imagen ISO descargada en un DVD o USB
 
-Bootear la maquina desde DVD o USB y saltar a la seccion ""D""
+  - Bootear la maquina desde DVD o USB, segun corresponda 
+  
+3. Continuar en la seccion **D**  
 
-### B) Trabajo en distintos lugares, con posibilidad de modificar el Sistema Operativo de cada PC
-- Virtualizacion de sistema operativo LPR (Virtualbox, Vmware,etc)
-- USB (4G) para almacenar imagenes y llevarlas a los distintos lugares  
+### B) Trabajo en distintos lugares, pudiendo acceder/modificar el disco de cada PC
+1. Requisitos:
+  - Virtualizacion de sistema operativo LPR (Virtualbox, Vmware,etc)
+  - USB (4G) para almacenar imagenes y llevarlas a los distintos lugares  
+  
+2. Configuracion inicial:  
+  - La imagen de LPR puede ser descargada desde < URL unsl >  
+  - Usar el virtualizador para crear una maquina virutal llamada LPR con las siguientes caracteristicas:
+    - Tipo Linux
+    - ubuntu 64 bits
+    - al menos 2G de ram
+    - En almacenamiento conectar la imagen ISO descargada al la lectora de DVD
+    - Configurar el booteo de la maquina virtual desde DVD
+    - Conectar el USB a la maquina virtual 
+  - Bootear la maquina virtual
+3. Continuar en a la seccion **D**
 
-La imagen de LPR puede ser descargada desde < URL unsl >  
+### C) Trabajo en un solo lugar, pudiendo acceder/modificar el dico de cada PC
+1. Requisitos:
+  - Virtualizacion de sistema operativo LPR (Virtualbox, Vmware,etc)
+  - Espacio en disco rpigido al menos 4Gb) para crear una Particion virtual
 
-Usar el virtualizador para crear una maquina virutal llamada LPR con las siguientes caracteristicas:
-- Tipo Linux
-- ubuntu 64 bits
-- al menos 2G de ram
-- En almacenamiento conectar la imagen ISO al la lectora de DVD
-- Configurar el booteo de la maquina virtual desde DVD
-- Conectar el USB a la maquina virtual 
+2. Configuracion inicial:  
+  - La imagen de LPR puede ser descargada desde < URL unsl >
+  - Usar el virtualizador para crear una maquina virutal llamada LPR con las siguientes caracteristicas:
+    - Tipo Linux
+    - ubuntu 64 bits
+    - al menos 2G de ram
+    - En almacenamiento conectar la imagen ISO al la lectora de DVD
+    - Configurar el booteo de la maquina virtual desde DVD
+    - crear un disco virtual tipo vdi , dinamico de al menos 4Gb
 
-Bootear la maquina virtual y saltar a la seccion ""D"
-
-### B) Trabajo en un solo lugar, con posibilidad de modificar el Sistema Operativo de cada PC
-- Virtualizacion de sistema operativo LPR (Virtualbox, Vmware,etc)
-- Particion virtual (4G) para almacenar imagenes
-
-La imagen de LPR puede ser descargada desde < URL unsl >
-
-Usar el virtualizador para crear una maquina virutal llamada LPR con las siguientes caracteristicas:
-- Tipo Linux
-- ubuntu 64 bits
-- al menos 2G de ram
-- En almacenamiento conectar la imagen ISO al la lectora de DVD
-- Configurar el booteo de la maquina virtual desde DVD
-- crear un disco virtual tipo vdi , dinamico de 4G
-
-Bootear la maquina virtual y saltaar a la seccion ""D"
-
-
-### D)
-
-una vez iniciado loguearse con usuario root password lprlpr
-
-aplications -> terminal emulator
-
-hacer un fdisk -l y tomar nota del nombre del disco de 4G que creamos
-
-cd Documents
-./inicializar.sh
-
-este procedimiento importara las imagenes al disco que se creo mas arriba
-
-va a pedir como parametro el nombre del disco, luego lo formateará y creará las imagenes de docker 
-
-una vez que termine, podes poner docker images -a para ver que este todo bien ....
-
-dependiendo de la maquina real que tienen, el proceso puede demorar un par de minutos (no mas de eso)
+  -Bootear la maquina virtual 
+  3. Continuar en la seccion **D**
 
 
-luego cambiarse a ssor
+### D) Inicialización de imagenes de Docker
 
-cd ssor
- y ahi estan todos los practicos (hasta ahora probe los 4 primeros)
-
+  - loguearse con usuario *root* password *lprlpr*
+  - En el menu, seleccionar aplications -> terminal emulator
+  - Averiguar el nombre de la particion que se usará para alamcenar las imagenes de docker
+    - Para ello escribir el siguente comando en la terminal y tomar nota del nombre del disco de 4G que creamos o el usb que conectamos
+      - fdisk -l
+  - Cambiarse al directorio *Documents* e inicializar las imagenes docker.
+    - Para ello ejecutar los siguentes comandos en la terminal:
+      - cd Documents
+      - ./inicializar.sh
+  - Este procedimiento importara las imagenes al disco que se creo mas arriba. Pide como parametro el nombre del disco, luego lo formateará y creará las imagenes de docker
+    - una vez que termine, se puede verificar las imagenes importadas ejecutand el comando:
+      - docker images -a
+  - NOTA: dependiendo de la maquina real que tienen y la velocidad de acceso de USB, el proceso puede demorar desde un par de minutos a 10 minutos ...
+  - Ahora estan en condiciones de hacer los practicos.
+    - Para ello ejecutan los siguientes comando en la terminal:
+      - cd ssor
+      - cd NOMBRE_DEL_PRACTICO
+      - ./iniciar.sh
+    
 el script iniciar.sh es para iniciar las practicas .... ( crea los contenedores a partir de las imagenes)
 una vez que se cambiaron archivos y configuraciones, se puede guardar ese estado (pausar.sh)
 el script pausar.sh hace commit de las maquinas a unas nuevas imagenes llamadas "practico"-nombre_del_contenedor
