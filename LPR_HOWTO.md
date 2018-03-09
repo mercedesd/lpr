@@ -52,7 +52,7 @@ se puede trabajar de varias maneras Dependiendo de la necesidad:
 
 
 ### D) Inicialización de imagenes de Docker
-  Esta tarea se ejecutara SOLO **una vez** en cada una de las maquinas que quiera utilizar para realizar los practicos.
+  Esta tarea se ejecutara **SOLO una vez** en cada una de las maquinas que quiera utilizar para realizar los practicos.
   - loguearse con usuario *root* password *lprlpr*
   - En el menu, seleccionar aplications -> terminal emulator
   - Averiguar el nombre de la particion que se usará para alamcenar las imagenes de docker
@@ -65,7 +65,7 @@ se puede trabajar de varias maneras Dependiendo de la necesidad:
   - Este procedimiento importara las imagenes al disco que se creo mas arriba. Pide como parametro el nombre del disco, luego lo formateará y creará las imagenes de docker
     - una vez que termine, se puede verificar las imagenes importadas ejecutando el comando:
       - docker images -a
-  - NOTA: dependiendo de la maquina real que tienen y la velocidad de acceso de USB, el proceso puede demorar desde un par de minutos a 10 minutos ...
+    - NOTA: dependiendo de la maquina real que tienen y la velocidad de acceso de USB, el proceso puede demorar desde un par de minutos a 10 minutos ...
   - Ahora estan en condiciones de hacer los practicos.
   
   ### E) Realizacion de Practicos:
@@ -92,8 +92,8 @@ se puede trabajar de varias maneras Dependiendo de la necesidad:
   
   - Luego, ya sea si estan en otra PC o continuan en la misma que ejecutaron ./pausar.sh , deben reanudar la ejecucion del practivo.
     - Para ello ejecutan en la terminal lo siguiente:
-      - ./continuar.sh
-    NOTA: Para el practico de dhcp y dns NO se guarda la configuracion de red ... hay que volver a configurar las placas de red y rutas, si fueran necesarias, en los contenedores
+      - ./continuar.sh  
+  NOTA: Para el practico de dhcp y dns NO se guarda la configuracion de red ... hay que volver a configurar las placas de red y rutas, si fueran necesarias, en los contenedores
 
 
 
