@@ -13,7 +13,7 @@ se puede trabajar de varias maneras Dependiendo de la necesidad:
 
   - Bootear la maquina desde DVD o USB, segun corresponda 
   
-3. Continuar en la seccion **D**  
+3. Continuar en la seccion **"D"**  
 
 ### B) Trabajo en distintos lugares, pudiendo acceder/modificar el disco de cada PC
 1. Requisitos:
@@ -30,7 +30,7 @@ se puede trabajar de varias maneras Dependiendo de la necesidad:
     - Configurar el booteo de la maquina virtual desde DVD
     - Conectar el USB a la maquina virtual 
   - Bootear la maquina virtual
-3. Continuar en a la seccion **D**
+3. Continuar en a la seccion **"D"**
 
 ### C) Trabajo en un solo lugar, pudiendo acceder/modificar el dico de cada PC
 1. Requisitos:
@@ -48,11 +48,11 @@ se puede trabajar de varias maneras Dependiendo de la necesidad:
     - crear un disco virtual tipo vdi , dinamico de al menos 4Gb  
   - Bootear la maquina virtual 
   
-  3. Continuar en la seccion **D**
+  3. Continuar en la seccion **"D"**
 
 
 ### D) Inicialización de imagenes de Docker
-
+  Esta tarea se ejecutara SOLO **una vez** en cada una de las maquinas que quiera utilizar para realizar los practicos.
   - loguearse con usuario *root* password *lprlpr*
   - En el menu, seleccionar aplications -> terminal emulator
   - Averiguar el nombre de la particion que se usará para alamcenar las imagenes de docker
