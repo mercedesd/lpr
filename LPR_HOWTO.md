@@ -45,9 +45,9 @@ se puede trabajar de varias maneras Dependiendo de la necesidad:
     - al menos 2G de ram
     - En almacenamiento conectar la imagen ISO al la lectora de DVD
     - Configurar el booteo de la maquina virtual desde DVD
-    - crear un disco virtual tipo vdi , dinamico de al menos 4Gb
-
-  -Bootear la maquina virtual 
+    - crear un disco virtual tipo vdi , dinamico de al menos 4Gb  
+  - Bootear la maquina virtual 
+  
   3. Continuar en la seccion **D**
 
 
@@ -63,34 +63,37 @@ se puede trabajar de varias maneras Dependiendo de la necesidad:
       - cd Documents
       - ./inicializar.sh
   - Este procedimiento importara las imagenes al disco que se creo mas arriba. Pide como parametro el nombre del disco, luego lo formateará y creará las imagenes de docker
-    - una vez que termine, se puede verificar las imagenes importadas ejecutand el comando:
+    - una vez que termine, se puede verificar las imagenes importadas ejecutando el comando:
       - docker images -a
   - NOTA: dependiendo de la maquina real que tienen y la velocidad de acceso de USB, el proceso puede demorar desde un par de minutos a 10 minutos ...
   - Ahora estan en condiciones de hacer los practicos.
-    - Para ello ejecutan los siguientes comando en la terminal:
+  
+  ### E) Realizacion de Practicos:
+  - Dependiendo del pracico que quieran realizar, 
+    - Ejecutan los siguientes comando en la terminal:
       - cd ssor
       - cd NOMBRE_DEL_PRACTICO
       - ./iniciar.sh
     
-el script iniciar.sh es para iniciar las practicas .... ( crea los contenedores a partir de las imagenes)
-una vez que se cambiaron archivos y configuraciones, se puede guardar ese estado (pausar.sh)
-el script pausar.sh hace commit de las maquinas a unas nuevas imagenes llamadas "practico"-nombre_del_contenedor
+  - Una vez que hicieron modificaciones en la configuracion de los servicios, pueden guardar el estado.
+    - ejecutando el comando:
+      - /pausar.sh
+    - el script ./pausar.sh hace commit de los contenedores usados a nuevas imagenes llamadas "practico"-nombre_del_contenedor
+  - Si quieren seguir trabajando en otra PC, deben llevarse en USB las imagenes con los cambios
+    - para ello ejecutan en la terminal:
+      - ./exportar
+      ese script mustra es espacio ocupado y pide un disco donde pondremos los archivos tar exportados (usb)
 
-aca hay dos alternativas :
-
-
-A) si lo queremos llevar a casa para seguir trabajando luego usamos exportar.sh
-
-ese script pide un disco donde pondremos los archivos tar exportados (usb)
-
-luego en la casa correr importar.sh, que carga en docker las imagenes exportadas anteriormente
-
-finalmente correr continuar.sh
-
-B) en el caso de querer seguir otro dia en el mismo lugar, correr el script continuar.sh, que crea nuevos contenedores a partir de las imagenes temporales guardadas en el script pausar
-
-
-NOTA: en ambos casos, para el practico de dhcp y dns NO se guarda la configuracion de red ... hay que volver a configurar las placas en los contenedores con ifconfig bla bla bla y las rutas si fueran necesarias, tambien
+  - Una vez que se encuentran en la otra PC:
+    - Deberán SOLO la primera vez que la usen inicializarla, de acuerdo al punto D. 
+    - Luego ir al directorio deferido al practico, y ejecutando en la terminal:
+      - cd Documents/ssor/NOMBRE_DEL_PRACTICO
+      - ./importar.sh
+  
+  - Luego, ya sea si estan en otra PC o continuan en la misma que ejecutaron ./pausar.sh , deben reanudar la ejecucion del practivo.
+    - Para ello ejecutan en la terminal lo siguiente:
+      - ./continuar.sh
+    NOTA: Para el practico de dhcp y dns NO se guarda la configuracion de red ... hay que volver a configurar las placas de red y rutas, si fueran necesarias, en los contenedores
 
 
 
