@@ -29,13 +29,13 @@ service docker stop
 mount $dispositivo /var/lib/docker
 service docker start
 
-docker load < /root/Documents/images/servidor-1.3.tar.gz
+docker load < /root/Documents/images/servidor-1.4.tar.gz
 echo "listo servidor"
-docker load < /root/Documents/images/cliente-1.3.tar.gz
+docker load < /root/Documents/images/cliente-1.4.tar.gz
 echo "listo cliente"
-docker load < /root/Documents/images/cliente-cli-1.3.tar.gz
+docker load < /root/Documents/images/cliente-cli-1.4.tar.gz
 echo "listo cliente-cli"
-docker load < /root/Documents/images/router-1.3.tar.gz
+docker load < /root/Documents/images/router-1.4.tar.gz
 echo "listo router"
 
 echo ""
