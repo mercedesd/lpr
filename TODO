@@ -1,4 +1,4 @@
-version anterior 1.2
+version actual 1.4
 
 Mejoras propuestas:
 
@@ -10,6 +10,7 @@ imagen cliente-cli
 	apt-get install elinks -> 1.3
 	apt-get install curl -> 1.3
 	apt-get install iputils-ping -> 1.3
+	apt-get install smbclient -> 1.4
 
 imagen servidor
 
@@ -30,4 +31,7 @@ imagen router
 	apt-get install iptables -> 1.3
 
 host
-	modificada imagen /usr/share/systemback/splash.png
+	modificada imagen /usr/share/systemback/splash.png -> 1.3
+	desinstalar servicios no usados como VirtualBox -> 1.4
+	apt-get install samba   para poder probar desde windows -> 1.4
+	apt-get install smbclient -> 1.4
