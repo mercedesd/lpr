@@ -1,13 +1,13 @@
-# LPR HOWTO - Como comenzar a trabajar con LPR  
+# LPR HOWTO - Cómo comenzar a trabajar con LPR  
 
-se puede trabajar de varias maneras Dependiendo de la necesidad:
+Se puede trabajar de varias maneras dependiendo de la necesidad:
 ### A) Trabajo en distintos lugares, sin acceder/modificar el disco de cada PC
 1. Requisitos:
   - LiveCD (DVD) o USB (4G) con sistema operativo LPR
   - USB (4G) para almacenar imagenes y llevarlas a los distintos lugares   
 
 2. Configuracion inicial:  
-  - La imagen de LPR puede ser descargada desde < URL unsl >  
+  - La imagen de LPR puede ser descargada desde < www.dirinfo.unsl.edu.ar/algun_directorio >  
 
   - Usar k3b u otra herramienta para grabar la imagen ISO descargada en un DVD o USB
 
@@ -17,11 +17,11 @@ se puede trabajar de varias maneras Dependiendo de la necesidad:
 
 ### B) Trabajo en distintos lugares, pudiendo acceder/modificar el disco de cada PC
 1. Requisitos:
-  - Virtualizacion de sistema operativo LPR (Virtualbox, Vmware,etc)
+  - Virtualización de sistema operativo LPR (Virtualbox, Vmware,etc)
   - USB (4G) para almacenar imagenes y llevarlas a los distintos lugares  
   
 2. Configuracion inicial:  
-  - La imagen de LPR puede ser descargada desde < URL unsl >  
+  - La imagen de LPR puede ser descargada desde < www.dirinfo.unsl.edu.ar/algun_directorio >  
   - Usar el virtualizador para crear una maquina virutal llamada LPR con las siguientes caracteristicas:
     - Tipo Linux
     - ubuntu 64 bits
