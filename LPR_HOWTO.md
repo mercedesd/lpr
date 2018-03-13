@@ -7,7 +7,7 @@ se puede trabajar de varias maneras Dependiendo de la necesidad:
   - USB (4G) para almacenar imagenes y llevarlas a los distintos lugares   
 
 2. Configuracion inicial:  
-  - La imagen de LPR puede ser descargada desde < URL unsl >  
+  - La imagen de LPR puede ser descargada desde < www.dirinfo.unsl.edu.ar/algun_directorio >  
 
   - Usar k3b u otra herramienta para grabar la imagen ISO descargada en un DVD o USB
 
