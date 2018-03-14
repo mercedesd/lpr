@@ -7,7 +7,7 @@ se puede trabajar de varias maneras Dependiendo de la necesidad:
   - USB (4G) para almacenar imagenes y llevarlas a los distintos lugares   
 
 2. Configuracion inicial:  
-  - La imagen de LPR puede ser descargada desde < URL unsl >  
+  - La imagen de LPR puede ser descargada desde < http://www.dirinfo.unsl.edu.ar/lpr/ >  
 
   - Usar k3b u otra herramienta para grabar la imagen ISO descargada en un DVD o USB
 
@@ -21,7 +21,7 @@ se puede trabajar de varias maneras Dependiendo de la necesidad:
   - USB (4G) para almacenar imagenes y llevarlas a los distintos lugares  
   
 2. Configuracion inicial:  
-  - La imagen de LPR puede ser descargada desde < URL unsl >  
+  - La imagen de LPR puede ser descargada desde < http://www.dirinfo.unsl.edu.ar/lpr/ >  
   - Usar el virtualizador para crear una maquina virutal llamada LPR con las siguientes caracteristicas:
     - Tipo Linux
     - ubuntu 64 bits
@@ -38,7 +38,7 @@ se puede trabajar de varias maneras Dependiendo de la necesidad:
   - Espacio en disco rpigido al menos 4Gb) para crear una Particion virtual
 
 2. Configuracion inicial:  
-  - La imagen de LPR puede ser descargada desde < URL unsl >
+  - La imagen de LPR puede ser descargada desde < http://www.dirinfo.unsl.edu.ar/lpr/ >
   - Usar el virtualizador para crear una maquina virutal llamada LPR con las siguientes caracteristicas:
     - Tipo Linux
     - ubuntu 64 bits
